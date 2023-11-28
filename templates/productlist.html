@@ -1,0 +1,120 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'css/producttab.css' %}">
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script>
+            // JavaScript code for smooth scrolling
+            document.addEventListener('DOMContentLoaded', function() {
+              var smoothScrollTriggers = document.querySelectorAll('a[href^="#"]');
+              for (var i = 0; i < smoothScrollTriggers.length; i++) {
+                smoothScrollTriggers[i].addEventListener('click', function(e) {
+                  e.preventDefault();
+                  var href = this.getAttribute('href');
+                  var targetElement = document.getElementById(href.replace('#', ''));
+                  var rect = targetElement.getBoundingClientRect();
+                  var offset = window.pageYOffset;
+                  var targetPosition = rect.top + offset;
+                  window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                  });
+                });
+              }
+            });
+          </script>
+          <link rel="icon" type="image/x-icon" href="{% static 'images/tron-favicon-01.png' %}">
+        <title>Tron - X</title>
+    </head>
+<body>
+
+  <section>
+  <div class="cover">
+    <img src="{% static 'images\background-01.jpg' %}" alt="">
+  </div>
+        
+    <nav>
+        <a href="index.html"><img class="navlogo" src="{% static 'images/Tron-xlogo-01.png' %}" alt=""></a>
+        <div class="navLinks" id="navLinks">
+            <img src="{% static 'icons/close-menu-icon.svg' %}" alt="" class="close" onclick="hideMenu()">
+            <ul>
+              <li><a href="{% url 'home'  %}">Home</a></li>
+              <li><a href="{% url 'about'  %}">About Us</a></li>
+              <li><a href="{% url 'productlist' %}">Products</a></li>
+              <li><a href="{% url 'home'  %}#whytronx">Why Tron-X</a></li>
+              <li><a href="{% url 'home'  %}#founder">Founder</a></li>
+              <li><a href="{% url 'teamlist' %}">Team</a></li>
+              <li><a href="{% url 'home'  %}#testimonail">Testimonails</a></li>
+              <li><a href="{% url 'home'  %}#contact">Contact</a></li>
+            </ul> 
+        </div>
+        <img src="{% static 'icons/open-menu-iocn.svg' %}" alt="" class="open" onclick="openMenu()">
+    </nav>
+</section>
+
+<section class="productlist" id="productlist">
+    <h2 class="sectionheadings hidden">Our Flagship Products</h2>
+    <div class="productlistholder">
+        {% for plist in p_list %}
+        <div class="productlistcard">
+            <img class="productlistimage" src="{{ plist.product_image.url }}" alt="">
+            <a href="{% url 'product_detail' plist.product_slug %}"><h4>{{ plist.product_name }}</h4> </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<footer id="contact">
+  <div class="logoholder">
+    <img src="{% static 'images/Tron-xlogo-01.png' %}" alt="">
+  </div>
+  <!-- <div class="socialmediaholder">
+    <a href=""><img src="{% static 'icons/facebook-icon.png' %}" alt="" class="socialmedia"></a>
+    <a href=""><img src="{% static 'icons/instagram-icon.png' %}" alt="" class="socialmedia"></a>
+    <a href=""><img src="{% static 'icons/youtube.png' %}" alt="" class="socialmedia"></a>
+    <a href=""><img src="{% static 'icons/linkedin.png' %}" alt="" class="socialmedia"></a>
+    <a href=""><img src="{% static 'icons/whatsapp.png' %}" alt="" class="socialmedia"></a>
+  </div> -->
+  <div class="fcontactholder">
+    <div class="callholder">
+      <img src="{% static 'icons/call-icon.png' %}" alt="">
+      <a href="">+911234567890</a>
+    </div>
+    <div class="callholder">
+      <img src="{% static 'icons/email-icon.png' %}" alt="">
+      <a href="mailto:tronxtechnolgies@gmail.com">tronxtechnolgies@gmail.com</a>
+    </div>
+    <div class="callholder">
+      <img src="{% static 'icons/whatsapp.png' %}" alt="">
+      <a href="https://wa.me/91998024364">+91 9980243640</a>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © 2023  Tron-X . All rights reserved. Design and Developed by <a href="theonesolution.co.in">The One Solution</a></p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="{% static 'js/nav.js' %}"></script>
+  <script src="{% static 'js/scrollanim.js' %}"></script>
+  <script src="{% static 'js/carousel.js' %}"></script>
+  <script src="{% static 'js/testimonail.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+
+h3{
+    color: #F1BC54;
+    text-align: center;
+    width: 100%;
+    margin: 1%;
+    
+}
+p{
+    width: 100%;
+    margin: 4%;
+    
+    
+}
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.tab-btn {
+    background-color: #F1BC54;
+    color: #000000;
+    border: none;
+    width: auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.productcontent{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.tab-btn.active {
+    background-color: white;
+}
+
+.tab-content {
+    display: none;
+    white-space: wrap;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    box-shadow: 0px 0px 50px -7px #F7F7F7; 
+}
+.align{
+    width: 90%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.tab-content p{
+    color: #ffffff;
+    text-align: left;
+    font-size: 18px;
+    white-space: break-spaces;
+    text-align: justify;
+}
+.productdescription{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    margin: 2% 0% 10% 0%;
+}
+.prodes{
+    width: 90%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.tabcontentholder{
+    width: 90%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: 0% 2% 0% 0%;
+    
+}
+.videoholder{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.iframe{
+    width: 30%;
+    margin: 2%;
+}
+@media (max-width: 500px){
+    .iframe{
+        width: 90%;
+        margin: 5%;
+    }
+}
+
+
+/* product list html */
+
+.productlist{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 5%;
+}
+.productlistholder{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.productlistcard{
+    width: 25%;
+    background-color: #000000;
+    box-shadow: 0px 0px 50px -7px #F7F7F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 2%;
+}
+.productlistimage{
+    width: 50%;
+    
+}
+.productlistcard a{
+    text-decoration: none;
+    width: 50%;
+}
+.productlistcard a h4{
+    text-align: center;
+    margin: 2%;
+}
+
+@media (max-width: 500px){
+    .productlist{
+        margin-bottom: 10%;
+    }
+    .productlistcard{
+        width: 100%;
+        
+    }
+    .productlistholder{
+        flex-direction: row;
+    }
+}
+
+
+.foundername{
+    margin: 2% 1% 2% 4%;
+    color: #F1BC54;
+    font-size: 40px;
+    font-weight: 600;
+}

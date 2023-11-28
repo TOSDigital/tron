@@ -1,0 +1,80 @@
+
+.carousel-container {
+    width: 90%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    display: none;
+    float: left;
+    width: 100%;
+    height: 600px;  
+}
+
+.carousel-slide img {
+    width: 100%;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.indicator { 
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.indicator.active{
+    background-color: #F1BC54;
+    width: 12px;
+    height: 12px;
+}
+.productcara{
+    margin: 5% 0% 0% 0%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (max-width: 500px){
+    .carousel-container{
+        width: 90%;
+        height: auto;
+    }
+    .productcara{
+        margin-top: 15%;
+    }
+    .carousel-slide{
+        width: 100%;
+        height: auto;
+    }
+    .carousel-slide img {
+        width: 100%;
+    }
+    .carousel-indicators {
+        bottom: 73%;
+        
+    }
+}
+
+
+
+
+
+
+
+
